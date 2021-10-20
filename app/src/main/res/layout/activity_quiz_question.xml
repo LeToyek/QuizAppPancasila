@@ -58,6 +58,56 @@
                 android:textColorHint="@color/welcome_color"/>
 
         </LinearLayout>
+        <TextView
+            android:id="@+id/tv_option_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/default_option_border"
+            android:text="PDIP"/>
+        <TextView
+            android:id="@+id/tv_option_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/default_option_border"
+            android:text="PDIP"/>
+        <TextView
+            android:id="@+id/tv_option_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/default_option_border"
+            android:text="PDIP"/>
+        <TextView
+            android:id="@+id/tv_option_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/default_option_border"
+            android:text="PDIP"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/SecondaryOrange"
+            android:text="Masukkan"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
 
     </LinearLayout>
 
