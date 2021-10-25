@@ -11,10 +11,8 @@
         android:theme="@style/Theme.QuizAppPancasila">
         <activity
             android:name=".QuizQuestion"
-            android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustResize"/>
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true"

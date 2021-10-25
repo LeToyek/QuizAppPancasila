@@ -24,6 +24,7 @@
             android:textSize="23sp"/>
 
         <ImageView
+            android:id="@+id/img_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -38,7 +39,7 @@
             android:orientation="horizontal"
             >
             <ProgressBar
-                android:id="@+id/progrees_bar"
+                android:id="@+id/progreesBar"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -51,7 +52,7 @@
                 android:id="@+id/tv_progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0/10"
+                tools:text="0/10"
                 android:gravity="center"
                 android:padding="15dp"
                 android:textSize="14sp"
@@ -67,7 +68,7 @@
             android:padding="15dp"
             android:textSize="18sp"
             android:background="@drawable/default_option_border"
-            android:text="PDIP"/>
+            tools:text="PDIP"/>
         <TextView
             android:id="@+id/tv_option_2"
             android:layout_width="match_parent"
@@ -77,7 +78,7 @@
             android:padding="15dp"
             android:textSize="18sp"
             android:background="@drawable/default_option_border"
-            android:text="PDIP"/>
+            tools:text="PDIP"/>
         <TextView
             android:id="@+id/tv_option_3"
             android:layout_width="match_parent"
@@ -87,7 +88,7 @@
             android:padding="15dp"
             android:textSize="18sp"
             android:background="@drawable/default_option_border"
-            android:text="PDIP"/>
+            tools:text="PDIP"/>
         <TextView
             android:id="@+id/tv_option_4"
             android:layout_width="match_parent"
@@ -97,12 +98,12 @@
             android:padding="15dp"
             android:textSize="18sp"
             android:background="@drawable/default_option_border"
-            android:text="PDIP"/>
+            tools:text="PDIP"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@color/SecondaryOrange"
+            android:backgroundTint="@color/SecondaryOrange"
             android:text="Masukkan"
             android:textColor="@color/white"
             android:textSize="18sp"
