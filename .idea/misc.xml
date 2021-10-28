@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Maulana Arif/AndroidStudioProjects/QuizAppPancasila2/app/src/main/res/drawable/correct_option_border.xml" value="0.2578125" />
         <entry key="..\:/Users/Maulana Arif/AndroidStudioProjects/QuizAppPancasila2/app/src/main/res/drawable/default_option_border.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Maulana Arif/AndroidStudioProjects/QuizAppPancasila2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15" />
+        <entry key="..\:/Users/Maulana Arif/AndroidStudioProjects/QuizAppPancasila2/app/src/main/res/drawable/incorrect_option_border.xml" value="0.2578125" />
         <entry key="..\:/Users/Maulana Arif/AndroidStudioProjects/QuizAppPancasila2/app/src/main/res/drawable/selected_option_border.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/Maulana Arif/AndroidStudioProjects/QuizAppPancasila2/app/src/main/res/drawable/selection_option_border.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/Maulana Arif/AndroidStudioProjects/QuizAppPancasila2/app/src/main/res/layout/activity_main.xml" value="0.264" />

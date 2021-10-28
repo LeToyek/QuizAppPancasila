@@ -14,4 +14,6 @@
     <color name="SecondaryOrange">#F9AA33</color>
     <color name="grayforoptionstroke">#E8E8E8</color>
     <color name="darkOrange">#FF8243</color>
+    <color name="greenCorrect">#39A388</color>
+    <color name="redIncorrect">#A9333A</color>
 </resources>

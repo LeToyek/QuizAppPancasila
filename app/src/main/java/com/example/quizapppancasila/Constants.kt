@@ -8,33 +8,22 @@ object Constants {
             ,"Gerindra","PKS","PKI",1)
         questionList.add(question1)
 
-        val question2 = Question(1,"Apakah nama partai ini ?",R.drawable.pdip,"PDIP"
+        val question2 = Question(1,"Apakah nama partai ini ?",R.drawable.pki,"PDIP"
             ,"Gerindra","PKS","PKI",1)
         questionList.add(question2)
 
-        val question3 = Question(1,"Apakah nama partai ini ?",R.drawable.pdip,"PDIP"
+        val question3 = Question(1,"Apakah nama partai ini ?",R.drawable.psi,"PDIP"
             ,"Gerindra","PKS","PKI",1)
         questionList.add(question3)
 
-        val question4 = Question(1,"Apakah nama partai ini ?",R.drawable.pdip,"PDIP"
-            ,"Gerindra","PKS","PKI",1)
+        val question4 = Question(1,"Apakah nama partai ini ?",R.drawable.gerindra,"PDIP"
+            ,"Gerindra","PKS","PKI",2)
         questionList.add(question4)
 
-        val question5 = Question(1,"Apakah nama partai ini ?",R.drawable.pdip,"PDIP"
+        val question5 = Question(1,"Apakah nama partai ini ?",R.drawable.demokrat,"PDIP"
             ,"Gerindra","PKS","PKI",1)
         questionList.add(question5)
-
-        val question6 = Question(1,"Apakah nama partai ini ?",R.drawable.pdip,"PDIP"
-            ,"Gerindra","PKS","PKI",1)
-        questionList.add(question6)
-
-        val question7 = Question(1,"Apakah nama partai ini ?",R.drawable.pdip,"PDIP"
-            ,"Gerindra","PKS","PKI",1)
-        questionList.add(question7)
-
-        val question8 = Question(1,"Apakah nama partai ini ?",R.drawable.pdip,"PDIP"
-            ,"Gerindra","PKS","PKI",1)
-        questionList.add(question8)
+        questionList.shuffle();
         return questionList
     }
 }

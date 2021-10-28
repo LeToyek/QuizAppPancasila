@@ -1,13 +1,16 @@
 package com.example.quizapppancasila
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Typeface
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 
 class QuizQuestion : AppCompatActivity(), View.OnClickListener {
     private lateinit var progressBar: ProgressBar
@@ -46,12 +49,21 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
         tvOptionThree.setOnClickListener(this)
         tvOptionFour.setOnClickListener(this)
         btnSubmit.setOnClickListener(this)
+
+
     }
     private fun setQuestion(){
-        mCurrentPosition = 1
+        btnSubmit.isEnabled = false
+        btnSubmit.setBackgroundColor(Color.parseColor("#7A8089"))
         val question = mQuestionList!![mCurrentPosition-1]
 
         defaultOptionView()
+
+        if(mCurrentPosition == mQuestionList!!.size){
+            btnSubmit.text = "Finish"
+        }else{
+            btnSubmit.text = "submit"
+        }
 
         progressBar.progress = mCurrentPosition
         tvProgress.text = "$mCurrentPosition" + "/" + progressBar.max
@@ -81,18 +93,28 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when(v?.id){
+
             R.id.tv_option_1->{
-                selectedOptionView(tvOptionOne,0)
+                selectedOptionView(tvOptionOne,1)
+                btnSubmit.isEnabled = true
+                btnSubmit.setBackgroundColor(Color.parseColor("#F9AA33"))
             }
             R.id.tv_option_2->{
-                selectedOptionView(tvOptionTwo,1)
+                selectedOptionView(tvOptionTwo,2)
+                btnSubmit.isEnabled = true
+                btnSubmit.setBackgroundColor(Color.parseColor("#F9AA33"))
             }
             R.id.tv_option_3->{
-                selectedOptionView(tvOptionThree, 2)
+                selectedOptionView(tvOptionThree, 3)
+                btnSubmit.isEnabled = true
+                btnSubmit.setBackgroundColor(Color.parseColor("#F9AA33"))
             }
             R.id.tv_option_4->{
-                selectedOptionView(tvOptionFour,3)
+                selectedOptionView(tvOptionFour,4)
+                btnSubmit.isEnabled = true
+                btnSubmit.setBackgroundColor(Color.parseColor("#F9AA33"))
             }
+
             R.id.btn_submit->{
                 if(mSelectedOption ==0 ){
                     mCurrentPosition++
@@ -106,10 +128,24 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
                         }
                     }
                 }
+                else{
+                    val question = mQuestionList?.get(mCurrentPosition-1)
+                    if(question!!.correctAnswer != mSelectedOption){
+                        answerView(mSelectedOption,R.drawable.incorrect_option_border)
+                    }
+                    answerView(question.correctAnswer,R.drawable.correct_option_border)
+                    if(mCurrentPosition == mQuestionList!!.size){
+                        btnSubmit.text = "Selesai"
+                    }else{
+                        btnSubmit.text = "Pertanyaan Berikutnya"
+                    }
+                    mSelectedOption = 0
+                }
             }
         }
     }
     private fun selectedOptionView(tv : TextView, selectedOptionNum : Int){
+
         defaultOptionView();
         mSelectedOption = selectedOptionNum
         tv.setTextColor(Color.parseColor("#363A43"))
@@ -117,6 +153,24 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
         tv.background = ContextCompat.getDrawable(
             this, R.drawable.selected_option_border
         )
+
+    }
+    private fun answerView(answer : Int, drawableView : Int){
+        when(answer){
+            1->{
+                tvOptionOne.background = ContextCompat.getDrawable(this,drawableView)
+            }
+            2->{
+                tvOptionTwo.background = ContextCompat.getDrawable(this,drawableView)
+            }
+            3->{
+                tvOptionThree.background = ContextCompat.getDrawable(this,drawableView)
+            }
+            4 ->{
+                tvOptionFour.background = ContextCompat.getDrawable(this,drawableView)
+            }
+        }
     }
 
 }
+

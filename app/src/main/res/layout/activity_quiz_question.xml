@@ -104,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:backgroundTint="@color/SecondaryOrange"
+            android:backgroundTint="@color/white_for_tv_name"
             android:text="Masukkan"
             android:textColor="@color/white"
             android:textSize="18sp"
