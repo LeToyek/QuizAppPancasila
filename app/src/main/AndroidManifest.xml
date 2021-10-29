@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizAppPancasila">
         <activity
+            android:name=".FinishActivity"
+            android:exported="true" />
+        <activity
             android:name=".QuizQuestion"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

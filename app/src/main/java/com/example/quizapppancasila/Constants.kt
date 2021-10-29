@@ -1,6 +1,7 @@
 package com.example.quizapppancasila
 
 object Constants {
+    const val USER_NAME : String = "user_name"
     fun getQuestion () : ArrayList<Question>{
         val questionList = ArrayList<Question>()
 

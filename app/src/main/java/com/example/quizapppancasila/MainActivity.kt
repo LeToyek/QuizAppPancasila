@@ -11,6 +11,7 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
     private lateinit var btnStart : Button
     private lateinit var edt_name : EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,8 +22,9 @@ class MainActivity : AppCompatActivity() {
             if (edt_name.text.toString().isEmpty()){
                 Toast.makeText(this,"Masukkan nama terlebih dahulu ",Toast.LENGTH_SHORT).show()
             }else{
-                val Intent = Intent(this,QuizQuestion::class.java)
-                startActivity(Intent)
+                val intent = Intent(this,QuizQuestion::class.java)
+                intent.putExtra(Constants.USER_NAME,edt_name.text.toString())
+                startActivity(intent)
                 finish()
             }
         }

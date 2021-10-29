@@ -1,5 +1,6 @@
 package com.example.quizapppancasila
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Typeface
@@ -25,11 +26,13 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition : Int = 1
     private var mQuestionList : ArrayList<Question>? = null
     private var mSelectedOption : Int = 0
+    private var mUserName : String? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question)
+        mUserName = intent.getStringExtra(Constants.USER_NAME)
         progressBar = findViewById(R.id.progreesBar)
         tvProgress = findViewById(R.id.tv_progress)
         tvQuestion = findViewById(R.id.tv_question)
@@ -53,6 +56,10 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
 
     }
     private fun setQuestion(){
+        tvOptionOne.isEnabled = true
+        tvOptionTwo.isEnabled = true
+        tvOptionThree.isEnabled = true
+        tvOptionFour.isEnabled = true
         btnSubmit.isEnabled = false
         btnSubmit.setBackgroundColor(Color.parseColor("#7A8089"))
         val question = mQuestionList!![mCurrentPosition-1]
@@ -122,13 +129,20 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
                         mCurrentPosition <= mQuestionList!!.size ->{
                             setQuestion()
                         }else->{
-                            Toast.makeText(this,"Selamat, Anda telah menyelesaikan quizx",Toast.LENGTH_SHORT)
+                            Toast.makeText(this,"Selamat, Anda telah menyelesaikan quiz",Toast.LENGTH_SHORT)
                                 .show()
-
+                        val intent = Intent(this,FinishActivity::class.java)
+                        intent.putExtra(Constants.USER_NAME,mUserName)
+                        startActivity(intent)
+                        finish()
                         }
                     }
                 }
                 else{
+                    tvOptionOne.isEnabled = false
+                    tvOptionTwo.isEnabled = false
+                    tvOptionThree.isEnabled = false
+                    tvOptionFour.isEnabled = false
                     val question = mQuestionList?.get(mCurrentPosition-1)
                     if(question!!.correctAnswer != mSelectedOption){
                         answerView(mSelectedOption,R.drawable.incorrect_option_border)
