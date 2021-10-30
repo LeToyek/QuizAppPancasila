@@ -53,7 +53,6 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
         tvOptionFour.setOnClickListener(this)
         btnSubmit.setOnClickListener(this)
 
-
     }
     private fun setQuestion(){
         tvOptionOne.isEnabled = true

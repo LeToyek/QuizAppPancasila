@@ -10,6 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizAppPancasila">
         <activity
+            android:name=".OpeningActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".FinishActivity"
             android:exported="true" />
         <activity
@@ -20,13 +31,7 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:windowSoftInputMode="adjustResize"/>
     </application>
 
 </manifest>
