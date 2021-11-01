@@ -5,11 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FinishActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/blue_to_gray"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"/>
+
+    <ImageView
+        android:layout_marginTop="25dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/trophy"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"/>
     <TextView
         android:id="@+id/tv_profile_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile"/>
+        android:text="Profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selesai"
+        android:backgroundTint="@color/SecondaryOrange"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+
 
 </LinearLayout>

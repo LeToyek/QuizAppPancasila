@@ -4,9 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.os.Handler
+import android.graphics.Typeface
+import android.widget.TextView
 
 
 class OpeningActivity : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_opening)
@@ -15,5 +20,6 @@ class OpeningActivity : AppCompatActivity() {
             startActivity(mainIntent)
             finish()
         }, 2000)
+
     }
 }

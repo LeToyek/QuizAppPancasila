@@ -27,12 +27,14 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
     private var mQuestionList : ArrayList<Question>? = null
     private var mSelectedOption : Int = 0
     private var mUserName : String? = null
+    private var mCorrectAnswers : Int = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question)
         mUserName = intent.getStringExtra(Constants.USER_NAME)
+        mCorrectAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS,0)
         progressBar = findViewById(R.id.progreesBar)
         tvProgress = findViewById(R.id.tv_progress)
         tvQuestion = findViewById(R.id.tv_question)
@@ -132,6 +134,7 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
                                 .show()
                         val intent = Intent(this,FinishActivity::class.java)
                         intent.putExtra(Constants.USER_NAME,mUserName)
+                        intent.putExtra(Constants.CORRECT_ANSWERS,mCorrectAnswers.toString())
                         startActivity(intent)
                         finish()
                         }
@@ -145,6 +148,8 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
                     val question = mQuestionList?.get(mCurrentPosition-1)
                     if(question!!.correctAnswer != mSelectedOption){
                         answerView(mSelectedOption,R.drawable.incorrect_option_border)
+                    }else{
+                        mCorrectAnswers++
                     }
                     answerView(question.correctAnswer,R.drawable.correct_option_border)
                     if(mCurrentPosition == mQuestionList!!.size){
