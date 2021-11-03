@@ -27,7 +27,7 @@ class FinishActivity : AppCompatActivity(), View.OnClickListener {
         tvProfileName = findViewById(R.id.tv_profile_name)
         tvProfileName.text = "Selamat, $username !"
         tvCorrectAnswer = findViewById(R.id.tv_score)
-        tvCorrectAnswer.text = "Anda menjawab benar sebanyak $correctAnswer dari 5 soal"
+        tvCorrectAnswer.text = "Anda menjawab benar sebanyak $correctAnswer dari 10 soal"
         btnFinish = findViewById(R.id.btn_finish)
         btnFinish.setOnClickListener(this)
     }
@@ -36,7 +36,6 @@ class FinishActivity : AppCompatActivity(), View.OnClickListener {
             super.onBackPressed()
             return
         }
-
         this.doubleBackToExitPressedOnce = true
         Toast.makeText(this, "ketuk lagi untuk keluar", Toast.LENGTH_SHORT).show()
 

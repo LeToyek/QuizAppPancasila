@@ -33,6 +33,7 @@ class QuizQuestion : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question)
+
         mUserName = intent.getStringExtra(Constants.USER_NAME)
         mCorrectAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS,0)
         progressBar = findViewById(R.id.progreesBar)
